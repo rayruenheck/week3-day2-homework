@@ -16,7 +16,7 @@ print(namesort(author))
 places = [('Nashua',32),("Boston",12),("Los Angelos",44),("Miami",29)]
 
 
-print(list(map(lambda degree: 9/5*degree[-1] +32 if degree[-1] else degree[0], places))) 
+print(list(map(lambda degree: 9/5*degree[-1] +32 if degree[-1] else degree[0], places))) # could not think of a solution to make the result replace the values in places
 
 
 
@@ -30,9 +30,12 @@ print(list(map(lambda degree: 9/5*degree[-1] +32 if degree[-1] else degree[0], p
 
 
 def fib(n):
-    if n <= 1:
+    if n <= 0:
+        return n
+    elif n <= 1:
         return n
     else:
+        print(f'iterable {n}: {fib(n-1) + fib(n-2)}') # i dont understand the output
         return(fib(n-1) + fib(n-2))
     
         
